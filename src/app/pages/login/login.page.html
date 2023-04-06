@@ -1,0 +1,37 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="flex-center">
+    <form [formGroup]="form">
+      <ion-card>
+        <ion-card-header>
+        <ion-card-title>Food Demo App</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+       <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+       </ion-item>
+       
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="Password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-label>
+         <ion-button color="dark" fill="clear" size="full" routerLink="/forgot-email-password">Forgot email/password</ion-button>
+        </ion-label>
+        <ion-item>
+        <ion-label>
+         <ion-button color="primary" size="full" [disabled]="!form.valid" (click)="login()">Login</ion-button>
+        </ion-label>
+      </ion-item>
+        <ion-label>
+         <ion-button color="dark" fill="clear" size="full" routerLink="/signup">Signup</ion-button>
+        </ion-label>
+       </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

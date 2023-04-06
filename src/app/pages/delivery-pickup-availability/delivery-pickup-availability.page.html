@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Delivery / Pickup Availability</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div id="container">
+    <ion-text>
+      <h1>See if we deliver in your area</h1>
+    </ion-text>
+    <form [formGroup]="zipCodeForm" (ngSubmit)="submitForm()">
+     <ion-item>
+       <ion-input placeholder="Enter Zip code" type="number" formControlName="code"></ion-input>
+       <ion-button color="primary" shape="round" (click)="submitForm()" [disabled]="!zipCodeForm.valid">Check</ion-button>
+     </ion-item>
+     <div *ngFor="let er of errors">
+      <ng-container *ngIf="zipCodeForm.get('code')?.hasError(er.type) && (zipCodeForm.get('code')?.touched || zipCodeForm.get('code')?.dirty)">
+        {{er.message}}
+      </ng-container>
+     </div>
+    </form>
+  </div>
+</ion-content>

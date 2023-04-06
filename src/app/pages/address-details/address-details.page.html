@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Add New Address</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <form action="" [formGroup]="addressForm" (ngSubmit)="submitForm()">
+      <ion-item>
+         <ion-input formControlName="streetNAme" placeholder="Street Name" type="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="suite" placeholder="Suite/API" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="gateCode" placeholder="Gate Code" type="number" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="name" placeholder="Name of Apartment/Community Name" type="communityName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="zipCode" type="number" placeholder="Zipcode*" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="city" placeholder="City*" required></ion-input>
+        <ion-input formControlName="state" placeholder="State*" required></ion-input>
+      </ion-item>
+    
+      <p>Tag this Location as</p>
+
+      <div>
+      <ion-button>Home</ion-button>
+      <ion-button>Work</ion-button>
+      <ion-button (click)="presentAlert()">Other</ion-button>
+      </div>
+
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="full" type="submit" [disabled]="!addressForm.valid" (click)="submitForm()">Save Address</ion-button>
+</ion-footer>

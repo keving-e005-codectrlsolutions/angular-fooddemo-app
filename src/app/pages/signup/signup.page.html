@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="primary">Create your MyHomeGrocers Account</ion-card-title>
+          <ion-card-subtitle>
+            <ion-item>
+              <ion-icon color="dark" name="person-sharp"></ion-icon>
+               <ion-input type="text" formControlName="firstName" placeholder="First Name*"></ion-input>
+            </ion-item>
+         
+            <ion-item>
+             <ion-icon color="dark" name="person-sharp"></ion-icon>
+               <ion-input type="text" formControlName="lastName" placeholder="Last Name*"></ion-input>
+            </ion-item>
+         
+            <ion-item>
+             <ion-icon color="dark" name="call-sharp"></ion-icon>
+                <ion-input type="tel" formControlName="phone" placeholder="Phone Number*"></ion-input>
+           </ion-item>
+         
+            <ion-item>
+             <ion-icon color="dark" name="mail-sharp"></ion-icon>
+                <ion-input type="email" formControlName="email" placeholder="E-mail Address*"></ion-input>
+            </ion-item>
+         
+           <ion-item>
+              <ion-icon color="dark" name="key-sharp"></ion-icon>
+                <ion-input type="text" formControlName="password" placeholder="Password*"></ion-input>
+            </ion-item>
+         
+            <ion-item>
+             <ion-icon color="dark" name="referral-code"></ion-icon>
+               <ion-input type="text" formControlName="referralCode" placeholder="Referral Code*"></ion-input>
+           </ion-item>
+          </ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+
+         <ion-button routerLink="/home">SignUp</ion-button>
+       
+          <ion-item>
+           <ion-title size="small">Already have an account?</ion-title>
+           <ion-button routerLink="/login">Login</ion-button>
+         </ion-item>
+        </ion-card-content>
+      </ion-card>
+

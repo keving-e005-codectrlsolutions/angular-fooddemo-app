@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card scroll="false">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>
+      <ion-text>
+      <h3>Name</h3>
+      <p>xyz@gamil.com</p>
+    </ion-text>
+    </ion-label>
+  </ion-item>
+  
+  <ion-buttons>
+    <ion-button color="primary" fill="clear" routerLink="/delivery-address">Deliver to</ion-button>
+    <ion-button color="primary" fill="clear">
+      Edit
+      <ion-icon slot="end" name="create"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-card>
+
+<ion-content>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full">My Orders</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" routerLink="/wishlist" expand="full">Wishlist</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full" routerLink="/mhg-rewards">MHG Rewards</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full" routerLink="/delivery-pickup-availability">Delivery/ Pickup Availability</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full" routerLink="/delivery-address">Address Details</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full" routerLink="/special-offers">Special Offers</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full">Refer and Earn</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full">FAQ</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="primary" fill="clear" expand="full" routerLink="/login">Logout</ion-button>
+  </ion-item>
+</ion-content>

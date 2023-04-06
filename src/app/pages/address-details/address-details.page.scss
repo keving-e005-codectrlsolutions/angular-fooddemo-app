@@ -1,0 +1,28 @@
+ion-header{
+    padding: 4px;
+}
+
+.flex-center{
+    display: flex;
+    height: 100%;
+}
+
+ion-item{
+    margin: 2px;
+    padding: 2px;
+}
+
+p{
+    text-align: center;
+}
+
+ion-button{
+    margin: 20px;
+    padding: auto;
+    --color-focused: rgb(220, 190, 245);
+    --slot: end;
+}
+
+ion-title{
+    font-weight: 700;
+}
